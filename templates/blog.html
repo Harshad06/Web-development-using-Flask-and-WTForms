@@ -1,0 +1,17 @@
+
+{% extends "base.htm" %}
+    {% block content %}
+                    <h2> ---Flask Web Development Blog---</h2>
+                    <p> Welcome, I'm {{ author }} - the creator of this blog </p>
+
+                    {% if sunny %}
+                        <p>Today is Sunny</p>
+                    {% else %}
+                        <p>Today is Rainy</p>
+                    {% endif %}
+
+                    {% for post in post %}
+                        <h3>{{ post.title }}</h3>
+                        <h3>Author: {{ post.Author }}</h3>
+                    {% endfor%}
+    {% endblock %}
